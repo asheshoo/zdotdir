@@ -52,6 +52,7 @@ path=(
 export EDITOR=hx
 export VISUAL=code
 export PAGER=bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi

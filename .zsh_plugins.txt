@@ -34,11 +34,15 @@ $ZSH_CUSTOM path:plugins/iwd
 #$ZSH_CUSTOM path:plugins/otp
 $ZSH_CUSTOM path:plugins/python
 $ZSH_CUSTOM path:plugins/mise
+$ZSH_CUSTOM path:plugins/trunk
 $ZSH_CUSTOM path:plugins/zfs conditional:is-macos
 
 # Utils
 romkatv/zsh-bench kind:path
 ohmyzsh/ohmyzsh path:plugins/extract
+
+# poetry
+darvid/zsh-poetry
 
 # Editor
 ohmyzsh/ohmyzsh path:plugins/magic-enter

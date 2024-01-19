@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+##? rcode - open vscode project on remote host
+#function funcfresh {
+if ! (( $# )); then
+  echo >&2 "usage: ${0##*/} <project> [<host>]"
+  return 1
+fi
+
+local project="${1}"
+local host="${2:-kiadv}"
+local project_path="~/workspace"
+
+if [[ "${host}" == "kiadv" ]]; then
+    if [[ "${project}" =~ ^test ]]
+    then
+        project_path=/nethome/dcoles/testdata
+    else
+        project_path=/nethome/dcoles/workspace/${project}
+    fi
+fi
+
+code --remote ssh-remote+${host} "${project_path}"

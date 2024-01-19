@@ -18,7 +18,7 @@ alias g=git
 alias ping='ping -c 5'
 alias vi=vim
 alias nv=nvim
-alias grep="command grep --exclude-dir={.git,.vscode}"
+# alias grep="command grep --exclude-dir={.git,.vscode} --color=auto"
 
 # directories
 alias secrets="cd ${XDG_DATA_HOME:=~/.local/share}/secrets"
@@ -28,6 +28,11 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias lsa="ls -aG"
 alias ldot='ls -ld .*'
+
+# safety first
+alias mv='mv -i'
+# alias rm='rm -i'
+alias cp='cp -i'
 
 # fix typos
 alias get=git
@@ -85,10 +90,24 @@ alias fconf=fdot
 alias zdot='cd $ZDOTDIR'
 
 # java
-alias setjavahome="export JAVA_HOME=\`/usr/libexec/java_home\`"
+# alias setjavahome="export JAVA_HOME=\`/usr/libexec/java_home\`"
 
 # todo-txt
 alias t="todo.sh"
 alias todos="$VISUAL $HOME/Desktop/todo.txt"
 
+# grep highlighting
+# alias bzegrep="bzegrep --color=auto"
+# alias bzfgrep="bzfgrep --color=auto"
+# alias bzgrep="bzgrep --color=auto"
+# alias egrep="egrep --color=auto"
+# alias fgrep="fgrep --color=auto"
+# alias grep="grep --color=auto"
+# alias xzegrep="xzegrep --color=auto"
+# alias xzfgrep="xzfgrep --color=auto"
+# alias xzgrep="xzgrep --color=auto"
+# alias zegrep="zegrep --color=auto"
+# alias zfgrep="zfgrep --color=auto"
+# alias zgrep="zgrep --color=auto"
+# alias zipgrep="zipgrep --color=auto"
 # vim: ft=zsh sw=2 ts=2 et
