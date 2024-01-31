@@ -6,16 +6,25 @@ export XDG_STATE_HOME=~/.local/state
 export XDG_RUNTIME_DIR=~/.xdg
 export XDG_PROJECTS_DIR=~/workspace
 
+# Ensure XDG directories exist.
+for _dir in ${(kM)parameters:#XDG_*_HOME} ${(kM)parameters:#XDG_*_DIR}; do
+  [[ -d "${(P)_dir}" ]] || mkdir -p "${(P)_dir}"
+done
+unset _dir
+
 # Add variables for key Zsh directories.
 export __zsh_config_dir=${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}
 export __zsh_user_data_dir=${XDG_DATA_HOME:-$HOME/.local/share}/zsh
 export __zsh_cache_dir=${XDG_CACHE_HOME:-$HOME/.cache}/zsh
+export ZSH_CACHE_DIR="${__zsh_cache_dir}"
 
 # Ensure Zsh directories exist.
 for _zdir in __zsh_{config,user_data,cache}_dir; do
   [[ -d "${(P)_zdir}" ]] || mkdir -p ${(P)_zdir}
 done
 unset _zdir
+
+[[ -d "${__zsh_cache_dir}/completions" ]] || mkdir -p "${__zsh_cache_dir}/completions"
 
 # Custom
 export DOTFILES=$XDG_CONFIG_HOME/dotfiles
@@ -39,6 +48,8 @@ path=(
   $HOME/{,s}bin(N)
   $HOME/.local/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
+  # prefer gnu versions of utilities
+  /{usr/local,opt/homebrew}/opt/*/libexec/gnubin(N)
   /usr/local/{,s}bin(N)
 
   # apps
@@ -48,11 +59,16 @@ path=(
   $path
 )
 
+# prefer gnu versions of utilties
+manpath=(
+  /{usr/local,opt/homebrew}/opt/*/libexec/gnuman(N)
+  $manpath
+)
+
 # Apps
 export EDITOR=hx
 export VISUAL=code
 export PAGER=bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi

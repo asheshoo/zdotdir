@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+if [[ -d .trunk ]]; then
+    echo Updating trunk:
+    trunk upgrade || return $?
+fi
+
+if [[ -f poetry.lock ]]; then
+    echo Updating poetry:
+    poetry update || return $?
+fi
+
+if [[ -f .venv ]]; then
+    pip3 --install --upgrade pip
+fi

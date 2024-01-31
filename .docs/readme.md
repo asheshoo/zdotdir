@@ -15,7 +15,7 @@ When run this way, be careful - all exported environment variables are still set
 
 If you want to run a totally clean environment, you can with with `env -i`.
 
-```
+```zsh
 env -i zsh -dfi
 ```
 
@@ -180,6 +180,4 @@ $ echo ${filepath:u:l}
 ```
 
 [zsh-modifiers]: http://zsh.sourceforge.net/Doc/Release/Expansion.html#Modifiers
-[filename-generation]:  http://zsh.sourceforge.net/Doc/Release/Expansion.html#Filename-Generation
-[zsh-glob-qualifiers]:  http://zsh.sourceforge.net/Doc/Release/Expansion.html#Glob-Qualifiers
-[glob-filter-stackexchange]: https://unix.stackexchange.com/questions/31504/how-do-i-filter-a-glob-in-zsh
+[zsh-glob-qualifiers]: http://zsh.sourceforge.net/Doc/Release/Expansion.html#Glob-Qualifiers

@@ -1,4 +1,4 @@
-#
+#!/usr/bin/env zsh
 # prompt
 #
 
@@ -10,4 +10,7 @@ autoload -Uz promptinit && promptinit
 
 # prompt starship mmc
 # prompt p10k pure
-prompt p10k mmc
+# prompt p10k dc
+# prompt starship nfs
+# prompt starship tokyo-night
+prompt starship bracketed-segments

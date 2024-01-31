@@ -17,8 +17,8 @@ alias py='python3'
 alias pip2update="pip2 list --outdated | cut -d ' ' -f1 | xargs -n1 pip2 install -U"
 alias pip3update="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U"
 alias pipup="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip3 install -U"
-alias pyfind='find . -name "*.py"'
-alias pygrep='grep --include="*.py"'
+alias pyfind='${aliases[ff]:-find} "*.py"'
+alias pygrep='${aliases[grep]:-grep} --include="*.py"'
 alias pyva="source .venv/bin/activate"
 
 # jupyter

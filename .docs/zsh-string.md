@@ -5,6 +5,7 @@ Fish has a utility for [string maniplulation][string].
 This is how you can do the same things with vanilla Zsh.
 
 References:
+
 - [Zsh regex][3]
 - [String modifiers][1]
 - [String expansion][2]
@@ -100,14 +101,14 @@ $ echo "${str:q}"
 Unescape (unquote) strings with the [Q modifier][1].
 This is similar to `string unescape` in [fish][unescape].
 
-```zsh
+````zsh
 $ str="3 backticks \`\`\`."
 $ esc="${str:q}"
 $ echo $esc
 3\ backticks\ \`\`\`.
 $ echo "${esc:Q}"
 3 backticks ```.
-```
+````
 
 ## Join/Split
 

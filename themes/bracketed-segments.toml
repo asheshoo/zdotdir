@@ -1,0 +1,78 @@
+format = """
+$sudo\
+$username\
+$hostname\
+$directory\
+$cmd_duration\
+$git_branch\
+$git_status\
+$python\
+\n\
+$status\
+$character"""
+
+[sudo]
+format = '[as $symbol]($style)'
+
+[username]
+style_user = 'blue bold'
+style_root = 'red bold'
+format = "[$user@]($style)"
+disabled = false
+show_always = false
+
+[hostname]
+disabled = false
+ssh_only = true
+format = '[$hostname](blue bold)'
+
+[directory]
+format = "[:](white bold)[$path ]($style)"
+# truncation_length = 1
+# truncation_symbol = ""
+fish_style_pwd_dir_length = 1
+
+
+[cmd_duration]
+format = ' :[⏱ $duration]($style)'
+
+[docker_context]
+format = ' :[$symbol$context]($style)'
+
+[git_branch]
+format = '[$symbol$branch]($style)'
+
+# [git_status]
+# format = '([ :$all_status$ahead_behind]($style))'
+
+[git_status]
+format = ' [$ahead_behind$stashed]($style)'
+# style = "cyan"
+stashed = "≡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+
+# [custom.git_status_dirty]
+# when = 'test -n "$(git status --porcelain 2>/dev/null)"'
+# symbol = "•"
+# style = "white"
+# format = "[$symbol]($style)"
+# shell = ["sh"]
+
+[os]
+format = ' :[$symbol]($style)'
+
+[python]
+format = ' [${symbol}${pyenv_prefix}($virtualenv)]($style)'
+symbol = ' '
+# format = ' :[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
+detect_files = [
+  'Pipfile',
+  '__init__.py',
+  'pyproject.toml',
+  'requirements.txt',
+  'setup.py',
+  'tox.ini',
+]
+detect_extensions = []
+detect_folders = []

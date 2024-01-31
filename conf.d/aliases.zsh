@@ -1,4 +1,4 @@
-#
+#!/usr/bin env
 # aliases - Zsh and bash aliases
 #
 
@@ -18,7 +18,7 @@ alias g=git
 alias ping='ping -c 5'
 alias vi=vim
 alias nv=nvim
-# alias grep="command grep --exclude-dir={.git,.vscode} --color=auto"
+alias grep="command grep --exclude-dir={.git,.vscode,.trunk,.mise} --color=auto"
 
 # directories
 alias secrets="cd ${XDG_DATA_HOME:=~/.local/share}/secrets"
@@ -56,7 +56,7 @@ alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 # disk usage
-alias biggest='du -s ./* | sort -nr | awk '\''{print $2}'\'' | xargs du -sh'
+alias biggest='du -h ./* | sort -hr'
 alias dux='du -x --max-depth=1 | sort -n'
 alias dud='du -d 1 -h'
 alias duf='du -sh *'
@@ -96,18 +96,4 @@ alias zdot='cd $ZDOTDIR'
 alias t="todo.sh"
 alias todos="$VISUAL $HOME/Desktop/todo.txt"
 
-# grep highlighting
-# alias bzegrep="bzegrep --color=auto"
-# alias bzfgrep="bzfgrep --color=auto"
-# alias bzgrep="bzgrep --color=auto"
-# alias egrep="egrep --color=auto"
-# alias fgrep="fgrep --color=auto"
-# alias grep="grep --color=auto"
-# alias xzegrep="xzegrep --color=auto"
-# alias xzfgrep="xzfgrep --color=auto"
-# alias xzgrep="xzgrep --color=auto"
-# alias zegrep="zegrep --color=auto"
-# alias zfgrep="zfgrep --color=auto"
-# alias zgrep="zgrep --color=auto"
-# alias zipgrep="zipgrep --color=auto"
 # vim: ft=zsh sw=2 ts=2 et

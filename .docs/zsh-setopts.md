@@ -11,7 +11,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.1 Changing Directories][16.2.1]
 
 | Option            | Short Description                           |
-|-------------------|---------------------------------------------|
+| ----------------- | ------------------------------------------- |
 | AUTO_CD           | If a command is dir name, `cd` to it        |
 | AUTO_PUSHD        | `cd` pushes to directory stack              |
 | CDABLE_VARS       | `cd var` works if `$var` is directory       |
@@ -29,7 +29,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.2 Completion][16.2.2]
 
 | Option               | Short Description                  |
-|----------------------|------------------------------------|
+| -------------------- | ---------------------------------- |
 | ALWAYS_LAST_PROMPT\* | Completion lists after prompt      |
 | ALWAYS_TO_END        | On completion go to end of word    |
 | AUTO_LIST\*          | List ambiguous completions         |
@@ -56,7 +56,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.3 Expansion and Globbing][16.2.3]
 
 | Option              | Short Description                              |
-|---------------------|------------------------------------------------|
+| ------------------- | ---------------------------------------------- |
 | BAD_PATTERN\*       | Errors on pattern syntax; else literal         |
 | BARE_GLOB_QUAL\*    | Glob qualifiers with bare parens               |
 | BRACE_CCL           | `X{ab}` expands to `Xa` `Xb`                   |
@@ -94,7 +94,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.4 History][16.2.4]
 
 | Option                  | Short Description                                |
-|-------------------------|--------------------------------------------------|
+| ----------------------- | ------------------------------------------------ |
 | APPEND_HISTORY\*        | History appends to existing file                 |
 | BANG_HIST\*             | `!` style history allowed                        |
 | EXTENDED_HISTORY        | Timestamps saved to history file                 |
@@ -122,7 +122,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.5 Initialization][16.2.5]
 
 | Option          | Short Description                   |
-|-----------------|-------------------------------------|
+| --------------- | ----------------------------------- |
 | ALL_EXPORT      | Export all variables to environment |
 | GLOBAL_EXPORT\* | Exported variables not made local   |
 | GLOBAL_RCS\*    | Execute `/etc/z*` files             |
@@ -133,7 +133,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.6 Input/Output][16.2.6]
 
 | Option               | Short Description                        |
-|----------------------|------------------------------------------|
+| -------------------- | ---------------------------------------- |
 | ALIASES\*            | Expand aliases                           |
 | CLOBBER\*            | Allow redirections to overwrite          |
 | CORRECT              | Correct spelling of commands             |
@@ -159,7 +159,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.7 Job Control][16.2.7]
 
 | Option         | Short Description                  |
-|----------------|------------------------------------|
+| -------------- | ---------------------------------- |
 | AUTO_CONTINUE  | Jobs are continued when `disown`ed |
 | AUTO_RESUME    | `cmd` can resume job `%cmd`        |
 | BG_NICE\*      | Background jobs at lower priority  |
@@ -174,7 +174,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.8 Prompting][16.2.8]
 
 | Option            | Short Description                  |
-|-------------------|------------------------------------|
+| ----------------- | ---------------------------------- |
 | PROMPT_BANG       | Special treatment of `!` in prompt |
 | PROMPT_CR\*       | Prompt always at start of line     |
 | PROMPT_PERCENT\*  | `%` escapes expanded in prompts    |
@@ -186,7 +186,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.9 Scripts and Functions][16.2.9]
 
 | Option             | Short Description                     |
-|--------------------|---------------------------------------|
+| ------------------ | ------------------------------------- |
 | C_BASES            | Output hexadecimal with `0x`          |
 | ERR_EXIT           | Exit shell on non-zero status         |
 | ERR_RETURN         | Return from function instead          |
@@ -206,7 +206,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.10 Shell Emulation][16.2.10]
 
 | Option             | Short Description                    |
-|--------------------|--------------------------------------|
+| ------------------ | ------------------------------------ |
 | BSD_ECHO           | No echo escapes unless `-e` given    |
 | CSH_JUNKIE_HISTORY | Single `!` for previous command      |
 | CSH_JUNKIE_LOOPS   | `list; end` for `do...done`          |
@@ -228,7 +228,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.11 Shell State][16.2.11]
 
 | Option         | Short Description                  |
-|----------------|------------------------------------|
+| -------------- | ---------------------------------- |
 | INTERACTIVE    | Shell is interactive               |
 | LOGIN          | Shell is login shell               |
 | PRIVILEGED     | Special behaviour on setuid/setgid |
@@ -241,7 +241,7 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 [16.2.11 Zle][16.2.12]
 
 | Option          | Short Description                         |
-|-----------------|-------------------------------------------|
+| --------------- | ----------------------------------------- |
 | BEEP\*          | Beep on errors                            |
 | COMBINING_CHARS | Display diacritics properly               |
 | EMACS           | Use Emacs editing. Prefer `bindkey -e`    |
@@ -250,16 +250,15 @@ Asterisk (\*) indicates the option is on by default for native zsh.
 | VI              | Use vi modal editing. Prefer `bindkey -v` |
 | ZLE             | Line editor used to input lines           |
 
-
-[16.2.1]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Changing-Directories
-[16.2.2]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Completion-4
-[16.2.3]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Expansion-and-Globbing
-[16.2.4]:   https://zsh.sourceforge.io/Doc/Release/Options.html#History
-[16.2.5]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Initialisation
-[16.2.6]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Input_002fOutput
-[16.2.7]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Job-Control
-[16.2.8]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting
-[16.2.9]:   https://zsh.sourceforge.io/Doc/Release/Options.html#Scripts-and-Functions
-[16.2.10]:  https://zsh.sourceforge.io/Doc/Release/Options.html#Shell-Emulation
-[16.2.11]:  https://zsh.sourceforge.io/Doc/Release/Options.html#Shell-State
-[16.2.12]:  https://zsh.sourceforge.io/Doc/Release/Options.html#Zle
+[16.2.1]: https://zsh.sourceforge.io/Doc/Release/Options.html#Changing-Directories
+[16.2.2]: https://zsh.sourceforge.io/Doc/Release/Options.html#Completion-4
+[16.2.3]: https://zsh.sourceforge.io/Doc/Release/Options.html#Expansion-and-Globbing
+[16.2.4]: https://zsh.sourceforge.io/Doc/Release/Options.html#History
+[16.2.5]: https://zsh.sourceforge.io/Doc/Release/Options.html#Initialisation
+[16.2.6]: https://zsh.sourceforge.io/Doc/Release/Options.html#Input_002fOutput
+[16.2.7]: https://zsh.sourceforge.io/Doc/Release/Options.html#Job-Control
+[16.2.8]: https://zsh.sourceforge.io/Doc/Release/Options.html#Prompting
+[16.2.9]: https://zsh.sourceforge.io/Doc/Release/Options.html#Scripts-and-Functions
+[16.2.10]: https://zsh.sourceforge.io/Doc/Release/Options.html#Shell-Emulation
+[16.2.11]: https://zsh.sourceforge.io/Doc/Release/Options.html#Shell-State
+[16.2.12]: https://zsh.sourceforge.io/Doc/Release/Options.html#Zle
