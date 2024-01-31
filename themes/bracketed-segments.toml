@@ -3,10 +3,10 @@ $sudo\
 $username\
 $hostname\
 $directory\
-$cmd_duration\
 $git_branch\
 $git_status\
 $python\
+$cmd_duration\
 \n\
 $status\
 $character"""
@@ -27,20 +27,18 @@ ssh_only = true
 format = '[$hostname](blue bold)'
 
 [directory]
-format = "[:](white bold)[$path ]($style)"
-# truncation_length = 1
-# truncation_symbol = ""
+format = "[:](white bold)[$path]($style)"
 fish_style_pwd_dir_length = 1
 
 
 [cmd_duration]
-format = ' :[⏱ $duration]($style)'
+format = ' [⏱ $duration]($style)'
 
 [docker_context]
-format = ' :[$symbol$context]($style)'
+format = ' [$symbol$context]($style)'
 
 [git_branch]
-format = '[$symbol$branch]($style)'
+format = ' [$symbol$branch]($style)'
 
 # [git_status]
 # format = '([ :$all_status$ahead_behind]($style))'
@@ -60,7 +58,7 @@ behind = "⇣${count}"
 # shell = ["sh"]
 
 [os]
-format = ' :[$symbol]($style)'
+format = ' [$symbol]($style)'
 
 [python]
 format = ' [${symbol}${pyenv_prefix}($virtualenv)]($style)'
