@@ -1,0 +1,28 @@
+#!usr/bin/emv zsh
+##? remove gnu tools from path
+
+local _path_ent=""
+local _path=()
+local _gnu_removed=false
+
+for _path_ent in "${path[@]}"; do
+  if [[ "${_path_ent}" =~ gnubin ]]; then
+    _gnu_removed=true
+    continue
+  fi
+  _path+=( "${_path_ent}" )
+done
+
+[[ "${_gnu_removed}" = true ]] || return 0
+
+echo "Removed gnu binaries from path"
+path=( "${_path[@]}" )
+
+_path=()
+for _path_ent in "${manpath[@]}"; do
+  [[ "${_path_ent}" =~ gnuman ]] && continue
+  _path+=( "${_path_ent}" )
+done
+
+# prefer gnu versions of utilties
+manpath=( "${_path[@]}" )

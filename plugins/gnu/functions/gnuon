@@ -1,0 +1,11 @@
+#!usr/bin/emv zsh
+##? add gnu tools to path
+
+echo "Adding gnu binaries to path"
+path=( /{usr/local,opt/homebrew}/opt/*/libexec/gnubin(N) $path )
+
+# prefer gnu versions of utilties
+manpath=(
+  /{usr/local,opt/homebrew}/opt/*/libexec/gnuman(N)
+  $manpath
+)
