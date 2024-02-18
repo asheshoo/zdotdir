@@ -21,6 +21,11 @@ zstyle ':zephyr:plugin:prompt' theme zephyr
 
 noexpand=(
   ls
+  ll
+  la
+  ltr
+  l.
+  ll.
   grep
   gpg
   vi

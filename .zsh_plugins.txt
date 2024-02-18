@@ -7,6 +7,7 @@ zshzoo/prompt
 #mattmc3/zephyr path:plugins/prompt
 
 mattmc3/zephyr path:plugins/zfunctions
+$ZSH_CUSTOM path:plugins/xdg
 
 # Zephyr
 mattmc3/zephyr path:plugins/homebrew
@@ -26,25 +27,22 @@ mattmc3/zephyr path:plugins/macos conditional:is-macos
 # ohmyzsh/ohmyzsh path:plugins/copypath
 
 # Custom
-$ZSH_CUSTOM path:plugins/abbreviations
+# $ZSH_CUSTOM path:plugins/abbreviations
 $ZSH_CUSTOM path:plugins/git
+$ZSH_CUSTOM path:plugins/gnu
 $ZSH_CUSTOM path:plugins/bat
 #$ZSH_CUSTOM path:plugins/gpg
 $ZSH_CUSTOM path:plugins/iwd
 #$ZSH_CUSTOM path:plugins/golang
 #$ZSH_CUSTOM path:plugins/otp
-$ZSH_CUSTOM path:plugins/python
 $ZSH_CUSTOM path:plugins/trunk
+$ZSH_CUSTOM path:plugins/yazi
 
 # Utils
 romkatv/zsh-bench kind:path
 ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/mise
 luoxu34/zfs-completion
-
-# poetry
-ohmyzsh/ohmyzsh path:plugins/poetry
-ohmyzsh/ohmyzsh path:plugins/poetry-env
 
 # Editor
 ohmyzsh/ohmyzsh path:plugins/magic-enter
@@ -61,6 +59,14 @@ mattmc3/zman
 ajeetdsouza/zoxide
 zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
+
+# python
+# Custom python plugin needs to be loaded after mise
+$ZSH_CUSTOM path:plugins/python 
+ohmyzsh/ohmyzsh path:plugins/poetry
+MichaelAquilina/zsh-autoswitch-virtualenv
+# ohmyzsh/ohmyzsh path:plugins/poetry-env
 
 # vi: ft=config

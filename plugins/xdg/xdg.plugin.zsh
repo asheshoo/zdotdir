@@ -7,6 +7,7 @@
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
+export XDG_MAN_HOME=~/.local/share/man
 export XDG_STATE_HOME=~/.local/state
 export XDG_RUNTIME_DIR=~/.xdg
 export XDG_PROJECTS_DIR=~/Projects
@@ -56,9 +57,6 @@ fi
 export JUPYTER_CONFIG_DIR="${JUPYTER_CONFIG_DIR:-$XDG_CONFIG_HOME/jupyter}"
 
 # node
-path+=(
-  /{opt/homebrew,usr/local}/share/npm/bin(N)
-)
 export NPM_CONFIG_USERCONFIG="${NPM_CONFIG_USERCONFIG:-$XDG_CONFIG_HOME/npm/npmrc}"
 export NODE_REPL_HISTORY="${NODE_REPL_HISTORY:-$XDG_DATA_HOME/nodejs/repl_history}"
 

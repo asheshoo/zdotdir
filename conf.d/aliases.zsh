@@ -15,7 +15,7 @@ alias l=ls
 alias g=git
 
 # mask built-ins with better defaults
-alias ping='ping -c 5'
+# alias ping='ping -c 5'
 alias vi=vim
 alias nv=nvim
 alias grep="command grep --exclude-dir={.git,.vscode,.trunk,.mise} --color=auto"
@@ -23,16 +23,31 @@ alias grep="command grep --exclude-dir={.git,.vscode,.trunk,.mise} --color=auto"
 # directories
 alias secrets="cd ${XDG_DATA_HOME:=~/.local/share}/secrets"
 
-# more ways to ls
-alias ll='ls -lh'
-alias la='ls -lAh'
-alias lsa="ls -aG"
-alias ldot='ls -ld .*'
+_eza_args="--group-directories-first --smart-group --git --classify=auto"
+alias ll="eza ${_eza_args} --long"
+alias la="eza ${_eza_args} --long --almost-all"
+alias ltr="eza ${_eza_args} --long --sort=time"
+alias l.="eza ${_eza_args} --list-dirs .*"
+alias ll.="eza ${_eza_args} --long --list-dirs .*"
+alias ls="eza ${_eza_args}"
+unset _eza_args
+
+if is-macos; then
+    alias dnf='brew'
+    alias yum='brew'
+elif (( $+commands[dnf] )); then
+    alias brew='dnf'
+    alias yum='dnf'
+elif (( $+commands[yum] )); then
+    alias brew='yum'
+    alias dnf='yum'
+fi
 
 # safety first
-alias mv='mv -i'
+alias mv='mv -iv'
 # alias rm='rm -i'
-alias cp='cp -i'
+alias cp='cp -iv'
+alias mkdir='mkdir -v'
 
 # fix typos
 alias get=git
@@ -52,14 +67,14 @@ alias utc="date -u +%Y-%m-%dT%H:%M:%SZ"
 alias unixepoch="date +%s"
 
 # find
-alias fd='find . -type d -name'
+# alias fd='find . -type d -name'
 alias ff='find . -type f -name'
 
 # disk usage
-alias biggest='du -h ./* | sort -hr'
+alias biggest='du -hc ./* | sort -hr'
 alias dux='du -x --max-depth=1 | sort -n'
 alias dud='du -d 1 -h'
-alias duf='du -sh *'
+# alias duf='du -sh *'
 
 # url encode/decode
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
@@ -78,9 +93,6 @@ alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
 alias print-path='echo $PATH | tr ":" "\n"'
 alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 
-# auto-orient images based on exif tags
-alias autorotate="jhead -autorot"
-
 # dotfiles
 alias dotf='cd "$DOTFILES"'
 alias dotfed='cd "$DOTFILES" && ${VISUAL:-${EDITOR:-vim}} .'
@@ -88,9 +100,6 @@ alias dotfl="cd \$DOTFILES/local"
 alias fdot='cd ${XDG_CONFIG_HOME:=$HOME/.config}/fish'
 alias fconf=fdot
 alias zdot='cd $ZDOTDIR'
-
-# java
-# alias setjavahome="export JAVA_HOME=\`/usr/libexec/java_home\`"
 
 # todo-txt
 alias t="todo.sh"

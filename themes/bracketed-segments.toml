@@ -30,21 +30,12 @@ format = '[$hostname](blue bold)'
 format = "[:](white bold)[$path]($style)"
 fish_style_pwd_dir_length = 1
 
-
-[cmd_duration]
-format = ' [⏱ $duration]($style)'
-
-[docker_context]
-format = ' [$symbol$context]($style)'
-
 [git_branch]
 format = ' [$symbol$branch]($style)'
 
-# [git_status]
-# format = '([ :$all_status$ahead_behind]($style))'
-
 [git_status]
 format = ' [$ahead_behind$stashed]($style)'
+# format = '([ :$all_status$ahead_behind]($style))'
 # style = "cyan"
 stashed = "≡"
 ahead = "⇡${count}"
@@ -57,12 +48,9 @@ behind = "⇣${count}"
 # format = "[$symbol]($style)"
 # shell = ["sh"]
 
-[os]
-format = ' [$symbol]($style)'
-
 [python]
-format = ' [${symbol}${pyenv_prefix}($virtualenv)]($style)'
-symbol = ' '
+format = ' [${pyenv_prefix}($virtualenv)( ${symbol} ${version})]($style)'
+symbol = '🐍 '
 # format = ' :[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
 detect_files = [
   'Pipfile',
@@ -74,3 +62,10 @@ detect_files = [
 ]
 detect_extensions = []
 detect_folders = []
+
+[cmd_duration]
+format = ' [⏱ $duration]($style)'
+
+[status]
+disabled = false
+symbol = ''

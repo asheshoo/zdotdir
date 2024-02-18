@@ -48,8 +48,6 @@ path=(
   $HOME/{,s}bin(N)
   $HOME/.local/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
-  # prefer gnu versions of utilities
-  /{usr/local,opt/homebrew}/opt/*/libexec/gnubin(N)
   /usr/local/{,s}bin(N)
 
   # apps
@@ -59,16 +57,9 @@ path=(
   $path
 )
 
-# prefer gnu versions of utilties
-manpath=(
-  /{usr/local,opt/homebrew}/opt/*/libexec/gnuman(N)
-  $manpath
-)
-
 # Apps
-export EDITOR=hx
-export VISUAL=code
-export PAGER=bat
+export EDITOR=nvim
+export VISUAL=nvim
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi

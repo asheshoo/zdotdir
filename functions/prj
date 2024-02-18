@@ -6,7 +6,7 @@ if ! command -v fzf >/dev/null; then
 fi
 
 local query=()
-local project_dir=${XDG_PROJECTS_DIR:-$HOME/Projects}
+local project_dir=${XDG_PROJECTS_DIR:-$HOME/workspace}
 local usage=(
   "prj [-h|--help]"
   "prj [-d|--directory=<project_dir>] [<query...>]"
