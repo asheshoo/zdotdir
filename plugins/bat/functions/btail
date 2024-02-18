@@ -1,0 +1,11 @@
+#!/bin/zsh
+##? tail a file using bat
+local _batargs=( "--language log" )
+local _arg
+for _arg in "$@"; do
+    if [[ -f "$_arg" ]]; then
+        _batargs=( "--file-name" "${_arg}" )
+        break
+    fi
+done
+tail "$@" | bat --paging=never "${_batargs[@]}"
