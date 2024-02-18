@@ -1,0 +1,13 @@
+#!/bin/zsh
+##? ssh-reset - Removes host entry from known hosts file
+#function ssh-reset {
+if [[ "$#" -ne 1 ]]; then
+	echo "Usage: ssh-reset <host>" >&2
+	exit 1
+fi
+local _known_hosts=~/.ssh/known_hosts_test
+if [[ ! -f "${_known_hosts}" ]]; then
+	echo "Error: '${_known_hosts}': File not found"
+	return 1
+fi
+ssh-keygen -f "${_known_hosts}" -R "$1" && ssh-keyscan -H "$1" ">>" "${_known_hosts}"
