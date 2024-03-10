@@ -14,12 +14,22 @@
 | Name | Description | URL | MacOs | Fedora | Roxy 9 | Centos 7 |
 | :--- | :---------- | :-- | :---- | :----- | :----- | :------- |
 
+## Graphical
+
+## Mac Window Managers
+
+- [phoenix](https://github.com/kasper/phoenix/)
+
 ### File Managers
 
 - [yazi][https://yazi-rs.github.io]
 - Ranger
 - mc
 - nnn (Deleted, )
+
+### File utilities
+
+- [bfs](https://tavianator.com/projects/bfs.html)
 
 ### Text Processing
 
@@ -31,6 +41,7 @@
 - [fd][https://github.com/sharkdp/fd]
 - [httpie][https://httpie.io]
 - [neofetch]
+- [tldr](https://tldr.sh)
 
 ### PKI
 

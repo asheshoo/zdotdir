@@ -37,6 +37,7 @@ $ZSH_CUSTOM path:plugins/iwd
 #$ZSH_CUSTOM path:plugins/otp
 $ZSH_CUSTOM path:plugins/trunk
 $ZSH_CUSTOM path:plugins/yazi
+$ZSH_CUSTOM path:plugins/iterm
 
 # Utils
 romkatv/zsh-bench kind:path
@@ -51,6 +52,13 @@ ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
 # Completion
 mattmc3/zephyr path:plugins/completion
 
+# python
+# Custom python plugin needs to be loaded after mise
+$ZSH_CUSTOM path:plugins/python 
+ohmyzsh/ohmyzsh path:plugins/poetry
+MichaelAquilina/zsh-autoswitch-virtualenv
+# ohmyzsh/ohmyzsh path:plugins/poetry-env
+
 # custom
 mattmc3/zsh_custom path:plugins/python
 
@@ -62,11 +70,5 @@ zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions
 zsh-users/zsh-history-substring-search
 
-# python
-# Custom python plugin needs to be loaded after mise
-$ZSH_CUSTOM path:plugins/python 
-ohmyzsh/ohmyzsh path:plugins/poetry
-MichaelAquilina/zsh-autoswitch-virtualenv
-# ohmyzsh/ohmyzsh path:plugins/poetry-env
 
 # vi: ft=config

@@ -10,7 +10,7 @@ export XDG_DATA_HOME=~/.local/share
 export XDG_MAN_HOME=~/.local/share/man
 export XDG_STATE_HOME=~/.local/state
 export XDG_RUNTIME_DIR=~/.xdg
-export XDG_PROJECTS_DIR=~/Projects
+export XDG_PROJECTS_DIR=~/workspace
 
 for _xdgdir in XDG_{CONFIG,CACHE,DATA,STATE}_HOME XDG_RUNTIME_DIR; do
   [[ -e ${(P)_xdgdir} ]] || mkdir -p ${(P)_xdgdir}
@@ -28,13 +28,6 @@ export LESSHISTFILE="${LESSHISTFILE:-$XDG_CACHE_HOME/less/history}"
 # readline
 export INPUTRC="${INPUTRC:-$XDG_CONFIG_HOME/readline/inputrc}"
 
-# screen
-export SCREENRC="${SCREENRC:-$XDG_CONFIG_HOME/screen/screenrc}"
-
-# tmux
-export TMUX_CONFIG="${TMUX_CONFIG:-$XDG_CONFIG_HOME/tmux/tmux.conf}"
-alias tmux="${aliases[tmux]:-tmux} -f \"\$TMUX_CONFIG\""
-
 # wget
 export WGETRC="${WGETRC:-$XDG_CONFIG_HOME/wget/wgetrc}"
 alias wget="${aliases[wget]:-wget} --hsts-file=\$XDG_CACHE_HOME/wget/wget-hsts"
@@ -47,21 +40,12 @@ alias wget="${aliases[wget]:-wget} --hsts-file=\$XDG_CACHE_HOME/wget/wget-hsts"
 export GNUPGHOME="${GNUPGHOME:-$XDG_DATA_HOME/gnupg}"
 alias gpg="${aliases[gpg]:-gpg} --homedir \"\$GNUPGHOME\""
 
-# groovy
-if [[ "$OSTYPE" == darwin* ]]; then
-  export GROOVY_HOME=$HOMEBREW_PREFIX/opt/groovy/libexec  # per homebrew
-  export GROOVY_TURN_OFF_JAVA_WARNINGS="true"
-fi
-
 # jupyter
 export JUPYTER_CONFIG_DIR="${JUPYTER_CONFIG_DIR:-$XDG_CONFIG_HOME/jupyter}"
 
 # node
 export NPM_CONFIG_USERCONFIG="${NPM_CONFIG_USERCONFIG:-$XDG_CONFIG_HOME/npm/npmrc}"
 export NODE_REPL_HISTORY="${NODE_REPL_HISTORY:-$XDG_DATA_HOME/nodejs/repl_history}"
-
-# nuget
-export NUGET_PACKAGES="${NUGET_PACKAGES:-$XDG_CACHE_HOME/NuGetPackages}"
 
 # postgres
 export PSQLRC="${PSQLRC:-$XDG_CONFIG_HOME/pg/psqlrc}"
