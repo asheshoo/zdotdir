@@ -21,7 +21,7 @@ alias nv=nvim
 alias grep="command grep --exclude-dir={.git,.vscode,.trunk,.mise} --color=auto"
 
 # directories
-alias secrets="cd ${XDG_DATA_HOME:=~/.local/share}/secrets"
+alias secrets="cd ${XDG_DATA_HOME:-~/.local/share}/secrets"
 
 _eza_args="--group-directories-first --smart-group --git --classify=auto"
 alias ll="eza ${_eza_args} --long"
@@ -97,7 +97,7 @@ alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 alias dotf='cd "$DOTFILES"'
 alias dotfed='cd "$DOTFILES" && ${VISUAL:-${EDITOR:-vim}} .'
 alias dotfl="cd \$DOTFILES/local"
-alias fdot='cd ${XDG_CONFIG_HOME:=$HOME/.config}/fish'
+alias fdot='cd ${XDG_CONFIG_HOME:-~/.config}/fish'
 alias fconf=fdot
 alias zdot='cd $ZDOTDIR'
 
