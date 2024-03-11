@@ -37,7 +37,7 @@ fi
 source $zsh_plugins
 
 # Set prompt.
-myprompt p10k mmc
+myprompt starship bracketed-segments
 
 # Initialize completions.
 mycompinit

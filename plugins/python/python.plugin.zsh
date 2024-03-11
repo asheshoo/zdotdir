@@ -6,13 +6,7 @@
 fpath=(${0:A:h}/functions $fpath)
 autoload -U $fpath[1]/*(.:t)
 
-# pip
-eval "$(python3 -m pip completion --zsh)"
-
 # pipx
-# pipx ensurepath
-# autoload -U bashcompinit
-# bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
 # workon

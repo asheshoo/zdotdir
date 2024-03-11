@@ -10,13 +10,16 @@ mattmc3/zfunctions
 # Zephyr
 mattmc3/zephyr path:plugins/macos conditional:is-macos
 
+# Completion
+mattmc3/zephyr path:plugins/completion
+
 # Custom
 # $ZSH_CUSTOM path:plugins/abbreviations
 $ZSH_CUSTOM path:plugins/git
 $ZSH_CUSTOM path:plugins/gnu
 $ZSH_CUSTOM path:plugins/bat
 #$ZSH_CUSTOM path:plugins/gpg
-$ZSH_CUSTOM path:plugins/iwd
+#$ZSH_CUSTOM path:plugins/iwd
 #$ZSH_CUSTOM path:plugins/golang
 #$ZSH_CUSTOM path:plugins/otp
 $ZSH_CUSTOM path:plugins/trunk
@@ -34,15 +37,16 @@ ohmyzsh/ohmyzsh path:plugins/magic-enter
 ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
 
 # Prompt
-sindresorhus/pure kind:fpath
-romkatv/powerlevel10k kind:fpath
+# sindresorhus/pure kind:fpath
+# romkatv/powerlevel10k kind:fpath
 
 # python
 # Custom python plugin needs to be loaded after mise
-$ZSH_CUSTOM path:plugins/python 
+$ZSH_CUSTOM path:plugins/python
+ohmyzsh/ohmyzsh path:plugins/pip
 ohmyzsh/ohmyzsh path:plugins/poetry
+ohmyzsh/ohmyzsh path:plugins/poetry-env
 MichaelAquilina/zsh-autoswitch-virtualenv
-# ohmyzsh/ohmyzsh path:plugins/poetry-env
 
 # custom
 mattmc3/zsh_custom path:plugins/python
