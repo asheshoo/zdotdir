@@ -22,8 +22,7 @@ zstyle ':antidote:plugin:*' defer-options '-p'
 # myzsh
 #
 
-zstyle ':myzsh:feature:prompt:p10k-instant-prompt' enabled yes
-zstyle ':myzsh:feature:prompt' theme 'p10k' 'mmc'
+zstyle ':myzsh:feature:prompt' theme 'starship' 'bracketed-segments'
 
 #
 # Custom

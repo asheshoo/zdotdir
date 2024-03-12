@@ -18,6 +18,8 @@ export XDG_PROJECTS_DIR=${XDG_PROJECTS_DIR:-$HOME/Projects}
 : ${__zsh_user_data_dir:=${XDG_DATA_HOME:-$HOME/.local/share}/zsh}
 : ${__zsh_cache_dir:=${XDG_CACHE_HOME:-$HOME/.cache}/zsh}
 
+export ZSH_CACHE_DIR="${__zsh_cache_dir}"
+
 # Ensure Zsh directories exist.
 () {
   local zdir
