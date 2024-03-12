@@ -9,8 +9,6 @@ mattmc3/zfunctions
 
 # Zephyr
 mattmc3/zephyr path:plugins/macos conditional:is-macos
-
-# Completion
 mattmc3/zephyr path:plugins/completion
 
 # Custom
@@ -25,6 +23,8 @@ $ZSH_CUSTOM path:plugins/bat
 $ZSH_CUSTOM path:plugins/trunk
 $ZSH_CUSTOM path:plugins/yazi
 $ZSH_CUSTOM path:plugins/iterm
+$ZSH_CUSTOM path:plugins/python
+$ZSH_CUSTOM path:plugins/pipx
 
 # Utils
 romkatv/zsh-bench kind:path
@@ -42,7 +42,6 @@ ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
 
 # python
 # Custom python plugin needs to be loaded after mise
-$ZSH_CUSTOM path:plugins/python
 ohmyzsh/ohmyzsh path:plugins/pip
 ohmyzsh/ohmyzsh path:plugins/poetry
 ohmyzsh/ohmyzsh path:plugins/poetry-env

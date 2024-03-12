@@ -6,9 +6,6 @@
 fpath=(${0:A:h}/functions $fpath)
 autoload -U $fpath[1]/*(.:t)
 
-# pipx
-eval "$(register-python-argcomplete pipx)"
-
 # workon
 export WORKON_HOME="$XDG_DATA_HOME/venvs"
 [[ -d "$WORKON_HOME" ]] || mkdir -p "$WORKON_HOME"
