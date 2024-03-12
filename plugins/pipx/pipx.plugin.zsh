@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 if (( $+commands[pipx] )); then
-    eval "$(${_register-python-argcomplete} --shell zsh pipx)"
+    eval "$(register-python-argcomplete --shell zsh pipx)"
     return
 elif (( $+commands[mise] )); then
     local _rpa
