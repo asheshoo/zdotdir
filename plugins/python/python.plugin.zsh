@@ -21,6 +21,3 @@ alias pyva="source .venv/bin/activate"
 
 # jupyter
 export JUPYTER_CONFIG_DIR="${JUPYTER_CONFIG_DIR:-$XDG_CONFIG_HOME/jupyter}"
-
-#pipx
-manpath+=( ${XDG_DATA_HOME}/man )

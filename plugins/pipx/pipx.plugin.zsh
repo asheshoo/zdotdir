@@ -12,3 +12,6 @@ elif (( $+commands[mise] )); then
     fi
     eval "$(${_rpa} --shell zsh pipx)"
 fi
+
+# pipx
+manpath+=( ${XDG_DATA_HOME}/man(N) )
