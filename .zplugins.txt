@@ -12,7 +12,7 @@ mattmc3/zephyr path:plugins/macos conditional:is-macos
 mattmc3/zephyr path:plugins/completion
 
 # Custom
-# $ZSH_CUSTOM path:plugins/abbreviations
+#$ZSH_CUSTOM path:plugins/abbreviations
 $ZSH_CUSTOM path:plugins/git
 $ZSH_CUSTOM path:plugins/gnu
 $ZSH_CUSTOM path:plugins/bat
