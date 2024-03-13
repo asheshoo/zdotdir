@@ -90,6 +90,7 @@ unset _brewcmd
 # Build remaining path.
 path=(
   $HOME/{,s}bin(N)
+  $HOME/.local/{,s}bin(N)
   $HOME/brew/{,s}bin(N)
   /opt/homebrew/{,s}bin(N)
   /usr/local/{,s}bin(N)
