@@ -35,7 +35,10 @@ luoxu34/zfs-completion
 # Editor
 ohmyzsh/ohmyzsh path:plugins/magic-enter
 ohmyzsh/ohmyzsh path:plugins/fancy-ctrl-z
+
+# macOS
 ohmyzsh/ohmyzsh path:plugins/iterm2 conditional:is-macos
+zshzoo/macos conditional:is-macos
 
 # Prompt
 # sindresorhus/pure kind:fpath
