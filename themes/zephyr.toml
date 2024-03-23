@@ -41,7 +41,7 @@ behind = "⇣${count}"
 when = 'test -n "$(git status --porcelain 2>/dev/null)"'
 symbol = "•"
 style = "white"
-format="[$symbol]($style)"
+format = "[$symbol]($style)"
 shell = ["sh"]
 
 [cmd_duration]

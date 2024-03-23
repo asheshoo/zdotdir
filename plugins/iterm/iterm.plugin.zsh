@@ -1,6 +1,4 @@
-#!/usr/bin/env zsh
-
-[[ "${TERM_PROGRAM:-}" == "iTerm.app" ]] || return 2
+[[ "${TERM_PROGRAM:-}" == "iTerm.app" ]] || return
 
 local _isi="/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh"
 

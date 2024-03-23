@@ -25,7 +25,7 @@ for _zrc in $ZDOTDIR/lib/*.zsh; source $_zrc; unset _zrc
 
 # Uncomment to manually set your prompt, or let kickstart.zsh do it automatically.
 autoload -Uz promptinit && promptinit
-prompt p10k mmc
+# prompt p10k mmc
 
 # IMPORTANT: Run zshrc-post at the very end of your .zshrc. If you don't, kickstart.zsh
 # will try to run it for you via a precmd hook, which might work fine, but might

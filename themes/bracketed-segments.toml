@@ -17,14 +17,14 @@ format = '[as $symbol]($style)'
 [username]
 style_user = 'blue bold'
 style_root = 'red bold'
-format = "[$user@]($style)"
+format = "[$user]($style)[@](bold white)"
 disabled = false
-show_always = false
+show_always = true
 
 [hostname]
 disabled = false
-ssh_only = true
-format = '[$hostname](blue bold)'
+ssh_only = false
+format = '[$hostname](green bold)'
 
 [directory]
 format = "[:](white bold)[$path]($style)"

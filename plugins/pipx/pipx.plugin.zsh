@@ -1,8 +1,9 @@
 #! /usr/bin/env zsh
 
+
+
 if (( $+commands[pipx] )); then
-    eval "$(register-python-argcomplete --shell zsh pipx)"
-    return
+    # cached-eval 'pipx-setup-zsh' zellij setup --generate-completion zsh
 elif (( $+commands[mise] )); then
     local _rpa
     _rpa=$(mise which register-python-argcomplete) 
@@ -10,7 +11,8 @@ elif (( $+commands[mise] )); then
         echo "${0##*/}: file not found: pipx" >&2
         return 1
     fi
-    eval "$(${_rpa} --shell zsh pipx)"
+    # eval "$(${_rpa} --shell zsh pipx)"
+    # cached-eval 'pipx-setup-zsh' zellij setup --generate-completion zsh
 fi
 
 # pipx

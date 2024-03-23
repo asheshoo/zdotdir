@@ -22,7 +22,7 @@ zstyle ':antidote:plugin:*' defer-options '-p'
 # myzsh
 #
 
-zstyle ':myzsh:feature:prompt' theme 'starship' 'bracketed-segments'
+zstyle ':kickstart.zsh:feature:prompt' theme 'starship' 'bracketed-segments'
 
 #
 # Custom

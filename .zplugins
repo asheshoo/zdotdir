@@ -22,9 +22,9 @@ $ZSH_CUSTOM path:plugins/bat
 #$ZSH_CUSTOM path:plugins/otp
 $ZSH_CUSTOM path:plugins/trunk
 $ZSH_CUSTOM path:plugins/yazi
-$ZSH_CUSTOM path:plugins/iterm
+# $ZSH_CUSTOM path:plugins/zellij
 $ZSH_CUSTOM path:plugins/python
-$ZSH_CUSTOM path:plugins/pipx
+# $ZSH_CUSTOM path:plugins/pipx
 
 # Utils
 romkatv/zsh-bench kind:path
