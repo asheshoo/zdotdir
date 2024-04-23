@@ -8,3 +8,5 @@ if [[ $(whoami) != $brew_owner ]]; then
   alias brew="sudo -Hu '$brew_owner' brew"
 fi
 unset brew_owner
+
+export HOMEBREW_NO_ENV_HINTS=1
