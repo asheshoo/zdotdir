@@ -1,0 +1,24 @@
+#####################################################
+# iTerm2 plugin for oh-my-zsh                       #
+# Author: Aviv Rosenberg (github.com/avivrosenberg) #
+#####################################################
+
+
+###
+# iterm2_profile(): Function for changing the current terminal window's
+# profile (colors, fonts, settings, etc).
+# To change the current iTerm2 profile, call this function and pass in a name
+# of another existing iTerm2 profile (name can contain spaces).
+# function iterm2_profile() {
+# Desired name of profile
+local profile="$1"
+
+# iTerm2 command for changing profile
+local cmd="1337;SetProfile=$profile"
+
+# send the sequence
+_iterm2_command "${cmd}"
+
+# update shell variable
+ITERM_PROFILE="$profile"
+# }
