@@ -1,3 +1,3 @@
-if (( $+commands[zellij] )); then
-    # cached-eval 'zellij-setup-zsh' zellij setup --generate-auto-start=zsh
-fi
+(( $+commands[zellij] )) || return 2
+
+cached-eval 'zellij-completion-zsh' zellij setup --generate-completion zsh
