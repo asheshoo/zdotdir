@@ -4,7 +4,7 @@
 
 # Setup antidote.
 : ${ZSH_CUSTOM:=$ZDOTDIR}
-: ${ANTIDOTE_HOME:=${XDG_CACHE_HOME:-~/.cache}/repos}
+: ${ANTIDOTE_HOME:=${XDG_CACHE_HOME:-~/.cache}/antidote}
 zstyle -s ':antidote:repo' path antidote_path \
   || antidote_path=$ANTIDOTE_HOME/mattmc3/antidote
 
