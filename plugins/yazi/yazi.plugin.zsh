@@ -1,6 +1,4 @@
+(( $+commands[yazi] )) || return 2
 
-if (( $+commands[yazi] )); then
-    # Load plugin functions.
-    fpath=(${0:A:h}/functions $fpath)
-    autoload -U $fpath[1]/*(.:t)
-fi
+# Load plugin functions.
+autoload-dir ${0:A:h}/functions
