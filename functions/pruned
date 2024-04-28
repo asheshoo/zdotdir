@@ -1,0 +1,11 @@
+#!/bin/env zsh
+##? pruned - Prune empty directories
+
+ (( $# )) || {
+    echo >&2 "Usage: pruned PATH [PATH ...]"
+    return 1
+  }
+
+local actions=( "--print" "-delete" )
+
+find "$@" -mindepth 1 \( \( -type f -name "*.DS_Store" \) -or \( -type d -empty \) \) "$actions[@]"
