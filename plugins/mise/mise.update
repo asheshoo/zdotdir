@@ -1,0 +1,2 @@
+# Required for 
+mise plugin | grep --quiet usage || mise plugin install usage
