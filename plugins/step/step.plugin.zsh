@@ -1,0 +1,3 @@
+
+export STEPPATH="${STEPPATH:-$XDG_CONFIG_HOME/step}"
+
