@@ -1,3 +1,5 @@
-(( $+commands[zellij] )) || return 2
+(( $+commands[zellij] )) || {
+    return 2
+}
 
-cached-eval 'zellij-completion-zsh' zellij setup --generate-completion zsh
+${0:A:h}/zellij.update_completions.zsh
