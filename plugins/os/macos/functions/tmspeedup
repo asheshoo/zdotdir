@@ -1,0 +1,2 @@
+#!/bin/zsh
+sudo sysctl debug.lowpri_throttle_enabled=${1:-0}
