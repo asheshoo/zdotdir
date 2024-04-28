@@ -1,19 +1,28 @@
-#! /usr/bin/env zsh
+manpath+=( ${XDG_DATA_HOME}/man(N) )
+export PIPX_HOME=${XDG_CACHE_HOME}/pipx
 
-
-
-if (( $+commands[pipx] )); then
-    # cached-eval 'pipx-setup-zsh' zellij setup --generate-completion zsh
-elif (( $+commands[mise] )); then
-    local _rpa
-    _rpa=$(mise which register-python-argcomplete) 
-    if [[ $? -ne 0 ]]; then
-        echo "${0##*/}: file not found: pipx" >&2
+function __pipx-completions-zsh {
+    [[ -z "$_DEFAULT_PYTHON" ]] && {
+        echo >&2 "Error: ${0:t}: _DEFAULT_PYTHON not defined"
         return 1
-    fi
-    # eval "$(${_rpa} --shell zsh pipx)"
-    # cached-eval 'pipx-setup-zsh' zellij setup --generate-completion zsh
-fi
+    }
+
+    local _py_path="${_DEFAULT_PYTHON%/*}"
+
+    [[ -x "${_py_path}/pipx" ]] || {
+        echo >&2 "Error: ${0:t}: pipx not installed"
+        return 1
+    }
+
+    [[ -x "${_py_path}/register-python-argcomplete" ]] || {
+        echo >&2 "Error: ${0:t}: register-python-argcomplete not installed"
+        return 1
+    }
+
+    "${_py_path}/register-python-argcomplete" pipx
+}
+
+cached-eval 'pipx-completions-zsh' __pipx-completions-zsh
 
 # pipx
-manpath+=( ${XDG_DATA_HOME}/man(N) )
+export PIPX_DEFAULT_PYTHON="${_DEFAULT_PYTHON}"
