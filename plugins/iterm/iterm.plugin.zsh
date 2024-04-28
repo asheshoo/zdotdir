@@ -1,5 +1,8 @@
 [[ "${TERM_PROGRAM:-}" == "iTerm.app" ]] || return
 
+# Load plugin functions.
+autoload-dir ${0:A:h}/functions
+
 local _isi="/Applications/iTerm.app/Contents/Resources/iterm2_shell_integration.zsh"
 
 if [[ -f "${_isi}" ]]; then
