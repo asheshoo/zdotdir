@@ -11,7 +11,6 @@
 
 # single character shortcuts - be sparing!
 alias _=sudo
-alias l=ls
 alias g=git
 
 # mask built-ins with better defaults
@@ -23,13 +22,13 @@ alias grep="command grep --exclude-dir={.git,.vscode,.trunk,.mise} --color=auto"
 # directories
 alias secrets="cd ${XDG_DATA_HOME:-~/.local/share}/secrets"
 
-_eza_args="--group-directories-first --smart-group --git --classify=auto"
+_eza_args="--group-directories-first --smart-group --git --classify=auto --icons"
 alias ll="eza ${_eza_args} --long"
 alias la="eza ${_eza_args} --long --almost-all"
 alias ltr="eza ${_eza_args} --long --sort=time"
 alias l.="eza ${_eza_args} --list-dirs .*"
 alias ll.="eza ${_eza_args} --long --list-dirs .*"
-alias ls="eza ${_eza_args}"
+alias l="eza ${_eza_args}"
 unset _eza_args
 
 if is-macos; then
@@ -78,7 +77,6 @@ alias brewinfo="brew leaves | xargs brew desc --eval-all"
 alias biggest='du -hc ./* | sort -hr'
 alias dux='du -x --max-depth=1 | sort -n'
 alias dud='du -d 1 -h'
-# alias duf='du -sh *'
 
 # url encode/decode
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
@@ -87,7 +85,6 @@ alias urlencode='python3 -c "import sys, urllib.parse as ul; \
     print (ul.quote_plus(sys.argv[1]))"'
 
 # misc
-alias please=sudo
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
 alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
 alias cls="clear && printf '\e[3J'"
@@ -101,12 +98,10 @@ alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 alias dotf='cd "$DOTFILES"'
 alias dotfed='cd "$DOTFILES" && ${VISUAL:-${EDITOR:-vim}} .'
 alias dotfl="cd \$DOTFILES/local"
-alias fdot='cd ${XDG_CONFIG_HOME:-~/.config}/fish'
-alias fconf=fdot
 alias zdot='cd $ZDOTDIR'
 
-# todo-txt
-alias t="todo.sh"
-alias todos="$VISUAL $HOME/Desktop/todo.txt"
+# # todo-txt
+# alias t="todo.sh"
+# alias todos="$VISUAL $HOME/Desktop/todo.txt"
 
 # vim: ft=zsh sw=2 ts=2 et

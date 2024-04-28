@@ -7,9 +7,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of .zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # Load all the kickstart.zsh libs.
 for _zrc in $ZDOTDIR/lib/*.zsh; source $_zrc; unset _zrc
@@ -24,7 +24,7 @@ for _zrc in $ZDOTDIR/lib/*.zsh; source $_zrc; unset _zrc
 # autoload -Uz compinit && compinit -i -d $ZSH_COMPDUMP
 
 # Uncomment to manually set your prompt, or let kickstart.zsh do it automatically.
-autoload -Uz promptinit && promptinit
+# autoload -Uz promptinit && promptinit
 # prompt p10k mmc
 
 # IMPORTANT: Run zshrc-post at the very end of your .zshrc. If you don't, kickstart.zsh

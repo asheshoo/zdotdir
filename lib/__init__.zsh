@@ -29,7 +29,9 @@ function cached-eval {
   # If the file has no size (is empty), or is older than 20 hours re-gen the cache.
   if [[ ! -s $memofile ]] || (( ! ${#cached} )); then
     mkdir -p ${memofile:h}
-    "$@" >| $memofile
+    if ! "$@" >| $memofile; then
+      echo "Error: ${0##*/} $@" >&2
+    fi
   fi
   source $memofile
 }
@@ -41,7 +43,7 @@ function cached-eval {
 [[ -r ${ZDOTDIR:-$HOME}/.zshrc.pre ]] && source ${ZDOTDIR:-$HOME}/.zshrc.pre
 
 # Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
+typeset -gU cdpath fpath mailpath path manpath
 
 # Setup homebrew if it exists on the system.
 typeset -aU _brewcmd=(
@@ -63,7 +65,6 @@ unset _brewcmd
 # Build remaining path.
 path=(
   $HOME/{,s}bin(N)
-  $HOME/.local/bin(N)
   $HOME/.local/{,s}bin(N)
   $HOMEBREW_PREFIX/{,s}bin(N)
   /usr/local/{,s}bin(N)
